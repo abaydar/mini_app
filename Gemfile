@@ -31,6 +31,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'rest-client'
 gem 'dotenv-rails'
 gem 'json'
+gem 'faker'
 
 group :development, :test do
   gem 'pry'

@@ -1,0 +1,7 @@
+<h1>Shows</h1>
+<ul>
+    <% @shows.each do |s|%>
+        <li><%= link_to s.name, show_path(s) %><br>
+        <%= image_tag s.image, width: '100px' %></li>
+    <% end %>
+</ul>

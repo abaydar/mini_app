@@ -16,3 +16,12 @@
 # end
 
 # Show.get_data
+
+# 25.times do 
+#     name = Faker::Name.name
+#     username = Faker::Internet.username(specifier: 7..9)
+
+#     user_hash = {name: name, username: username}
+
+#     User.create(user_hash)
+# end
