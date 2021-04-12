@@ -10,13 +10,24 @@ class ShowsController < ApplicationController
   end
   
   def create
-
+    @show = Show.new(show_params)
+    if @show.valid?
+      @show.save
+      redirect_to show_path(@show)
+    else
+      render :new
+    end
   end
 
   def edit
   end
 
   def update
+    if @show.update(show_params)
+      redirect_to show_path(@show)
+    else
+      render :edit
+    end
   end
 
   def show

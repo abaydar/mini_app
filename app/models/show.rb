@@ -1,6 +1,7 @@
 class Show < ApplicationRecord
     has_many :user_shows 
     has_many :users, through: :user_shows 
+    validates :name, presence: true 
     
     def self.get_data
         response = RestClient.get("http://api.tvmaze.com/shows")

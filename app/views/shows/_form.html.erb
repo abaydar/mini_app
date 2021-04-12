@@ -1,0 +1,29 @@
+<%= form_with model: show do |f| %>
+<p>
+<% if @show.errors.any? %>
+    <h3>There were some errors:</h3>
+    <ul>
+    <% @show.errors.full_messages.each do |m| %>
+        <li><%= m %>
+    </ul>
+    <% end %>
+<% end %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %><br><br>
+
+    <%= f.label :genre %>
+    <%= f.text_field :genre %><br><br>
+
+    <%= f.label :status %>
+    <%= f.select :status, ["Running", "Ended"], prompt: true %><br><br>
+
+    <%= f.label :premiered %>
+    <%= f.text_field :premiered %> (YYYY-MM-DD) <br><br>
+
+    <%= f.label :image, "Image URL" %>
+    <%= f.text_field :image %><br><br>
+
+    <%= f.submit %>
+</p>
+<% end %>

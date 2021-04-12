@@ -1,9 +1,9 @@
 <h1><%=@show.name%></h1>
 <p>
-<%=image_tag @show.image%><br><br>
+<%=image_tag @show.image, width: '300px'%><br><br>
 <strong>Genre: </strong><%=@show.genre %><br>
 <strong>Status: </strong><%=@show.status %><br>
-<strong>Premiered: </strong><%=@show.premiered %><br>
+<strong>Premiered: </strong><%=@show.premiered %><br><br><br>
 
-
+<%= link_to "Edit Show", edit_show_path(@show) %>
 </p>
